@@ -1,3 +1,5 @@
+
+png("plot4.png", width=480, height=480)
 par(mfrow = c(2, 2))
 with(data1, {
   plot(Global_active_power~as.POSIXct(newtime), type= "l", ylab = "Global Active Power (kilowatts)", xlab = "")
@@ -9,6 +11,4 @@ with(data1, {
   plot(Global_reactive_power~as.POSIXct(newtime), type = "l", ylab = "Global Rective Power (kilowatts)", xlab = "")
 })
 
-
-dev.copy(png, "plot4.png", width=480, height=480)
 dev.off()
